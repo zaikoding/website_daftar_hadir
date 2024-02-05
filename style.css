@@ -44,16 +44,6 @@
   overflow: hidden; /* Hide overflow content (including the running line) */
 }
 
-.form-frame::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, #ffc107, transparent);
-  animation: running-line 2s infinite linear;
-}
 
 .frame-sm {
   height: 400px; /* Sesuaikan tinggi frame sesuai keinginan Anda */
