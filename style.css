@@ -55,15 +55,6 @@
   animation: running-line 2s infinite linear;
 }
 
-@keyframes running-line {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
 .frame-sm {
   height: 400px; /* Sesuaikan tinggi frame sesuai keinginan Anda */
 }
