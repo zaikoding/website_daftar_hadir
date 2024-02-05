@@ -44,35 +44,20 @@
 .form-frame::before {
   content: "";
   position: absolute;
-  top: -2px;
-  left: -2px;
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border: 2px solid transparent;
-  border-radius: 12px;
-  animation: running-line 2s infinite linear;
-  z-index: 1; /* Pastikan garis berada di atas konten formulir */
+  border-radius: 10px;
+  animation: running-line 4s infinite linear;
 }
 
 @keyframes running-line {
   0% {
-    top: -2px;
-    left: -2px;
-  }
-  25% {
-    top: -2px;
-    left: calc(100% - 2px);
-  }
-  50% {
-    top: calc(100% - 2px);
-    left: calc(100% - 2px);
-  }
-  75% {
-    top: calc(100% - 2px);
-    left: -2px;
+    transform: translateX(-100%);
   }
   100% {
-    top: -2px;
-    left: -2px;
+    transform: translateX(100%);
   }
 }
