@@ -106,18 +106,19 @@ body {
 
 @keyframes running-line {
   0% {
-    transform: translateY(0); /* Mulai dari atas formulir */
+    transform: translateX(-100%);
   }
   25% {
-    transform: translateY(100%); /* Bergerak ke bawah */
+    transform: translateY(100%);
   }
   50% {
-    transform: translateY(100%) translateX(100%); /* Bergerak ke kanan */
+    transform: translateX(100%);
   }
   75% {
-    transform: translateY(0) translateX(100%); /* Bergerak ke atas */
+    transform: translateY(-100%);
   }
   100% {
-    transform: translateY(0); /* Kembali ke posisi awal */
+    transform: translateX(-100%);
   }
 }
+
