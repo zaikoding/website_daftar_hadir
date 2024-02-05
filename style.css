@@ -99,10 +99,10 @@ body {
     transform: translateX(-100%);
   }
   25% {
-    transform: translateY(100%);
+    transform: translateY(50%);
   }
   50% {
-    transform: translateX(100%);
+    transform: translateX(50%);
   }
   75% {
     transform: translateY(-100%);
