@@ -115,9 +115,18 @@ body {
 
 @keyframes running-line {
   0% {
-    left: -100%;
+    transform: translateX(0) translateY(0); /* Mula-mula, garis dimulai dari kiri atas */
+  }
+  25% {
+    transform: translateX(100%) translateY(0); /* Bergerak ke kanan */
+  }
+  50% {
+    transform: translateX(100%) translateY(100%); /* Bergerak ke kanan bawah */
+  }
+  75% {
+    transform: translateX(0) translateY(100%); /* Bergerak ke kiri bawah */
   }
   100% {
-    left: 100%; /* Ubah nilai left agar garis bergerak hingga keluar dari form */
+    transform: translateX(0) translateY(0); /* Kembali ke posisi awal */
   }
 }
