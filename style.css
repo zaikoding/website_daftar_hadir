@@ -41,37 +41,38 @@
   overflow: hidden;
 }
 
-.form-frame::after {
+.form-frame::before {
   content: "";
   position: absolute;
-  top: -100%;
-  left: -100%;
-  width: 300%;
-  height: 300%;
-  background: linear-gradient(90deg, transparent, #ffc107, transparent);
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  border: 2px solid transparent;
+  border-radius: 12px;
   animation: running-line 2s infinite linear;
+  z-index: 1; /* Pastikan garis berada di atas konten formulir */
 }
 
 @keyframes running-line {
   0% {
-    top: -100%;
-    left: -100%;
+    top: -2px;
+    left: -2px;
   }
   25% {
-    top: -100%;
-    left: 100%;
+    top: -2px;
+    left: calc(100% - 2px);
   }
   50% {
-    top: 100%;
-    left: 100%;
+    top: calc(100% - 2px);
+    left: calc(100% - 2px);
   }
   75% {
-    top: 100%;
-    left: -100%;
+    top: calc(100% - 2px);
+    left: -2px;
   }
   100% {
-    top: -100%;
-    left: -100%;
+    top: -2px;
+    left: -2px;
   }
 }
-
