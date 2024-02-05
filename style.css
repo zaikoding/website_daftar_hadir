@@ -83,7 +83,7 @@ body {
   margin-right: 10px;
 }
 
-.form-frame::before {
+.form-frame::after {
   content: "";
   position: absolute;
   top: 0;
