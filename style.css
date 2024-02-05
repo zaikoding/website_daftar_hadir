@@ -21,9 +21,9 @@
 }
 
 .btn-custom-color {
-  background-color: ffff00; /* Ganti dengan kode warna yang Anda inginkan */
+  background-color: #ff7f50; /* Ganti dengan kode warna yang Anda inginkan */
   color: #ffffff; /* Ganti dengan warna teks yang sesuai */
-  border-color: #ff4500; /* Ganti dengan warna border yang sesuai */
+  border-color:#ff7f50; /* Ganti dengan warna border yang sesuai */
 }
 
 .button-container .btn-custom-color:hover {
