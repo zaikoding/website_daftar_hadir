@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+.frame {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 2, 0.8), rgba(0, 0, 0, 0.8)), url(bg.JPG);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-fluid {
+  width: 300%;
+  color: #fff;
+}
+
+.btn-custom-color {
+  background-color: #ff4500; /* Ganti dengan kode warna yang Anda inginkan */
+  color: #ffffff; /* Ganti dengan warna teks yang sesuai */
+  border-color: #ff4500; /* Ganti dengan warna border yang sesuai */
+}
+
+.button-container .btn-custom-color:hover {
+  background-color: #cc3700; /* Ganti dengan kode warna hover yang Anda inginkan */
+  border-color: #cc3700; /* Ganti dengan warna border hover yang sesuai */
+}
+
+.row {
+  height: 100%;
+}
+
+.form-frame {
+  position: relative;
+  background-color: rgb(0, 0, 255);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden; /* Hide overflow content (including the running line) */
+}
+
+.form-frame::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #ffc107, transparent);
+  animation: running-line 2s infinite linear;
+}
+
+@keyframes running-line {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.frame-sm {
+  height: 400px; /* Sesuaikan tinggi frame sesuai keinginan Anda */
+}
+
+.frame-content {
+  height: 100%; /* Gunakan tinggi 100% agar elemen di dalamnya memanfaatkan tinggi frame yang telah diatur */
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+.frame {
+  height: 100vh;
+}
+
+.form-frame {
+  max-width: 300px; /* Lebar maksimum formulir */
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-custom-color {
+  background-color: #45CCFF;
+  border-color: #ffc107;
+}
+
+.btn-custom-color:hover {
+  background-color: #e0a800;
+  border-color: #e0a800;
+}
+
+.btn-custom-color img {
+  margin-right: 10px;
+}
+
+footer {
+  display: none; /* Menyembunyikan footer setelah sukses */
+}
+
+.form-frame::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ffc107, transparent);
+  animation: running-line 2s infinite linear;
+}
+
+@keyframes running-line {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}

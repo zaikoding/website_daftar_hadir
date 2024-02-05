@@ -1,0 +1,25 @@
+/* style.css */
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+}
+
+.dashboard-container {
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.dashboard-container h1 {
+  text-align: center;
+}
+
+.menu-item {
+  margin-top: 20px;
+}

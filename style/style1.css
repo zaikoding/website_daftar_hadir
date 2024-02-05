@@ -1,0 +1,38 @@
+body.frame {
+  margin: 0;
+  padding: 20px;
+  background-color: #f0f0f0; /* Warna latar belakang */
+  position: relative;
+}
+
+.frame-container {
+  width: 100%;
+  max-width: 300px; /* Lebar maksimal bingkai, sesuaikan sesuai kebutuhan */
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.frame-border {
+  position: relative;
+  border: 5px solid #3498db; /* Warna bingkai utama */
+  border-radius: 10px; /* Sudut melengkung bingkai */
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.7); /* Efek bayangan */
+}
+
+.frame-border::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border: 1px solid black; /* Garis putih sepanjang bingkai */
+  border-radius: 10px; /* Sesuaikan dengan sudut melengkung bingkai */
+  pointer-events: none; /* Menghindari interaksi dengan elemen tambahan ini */
+}
+
+.inner-content {
+  padding: 20px;
+}
+ 
