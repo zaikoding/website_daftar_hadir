@@ -1,10 +1,8 @@
-/* style.css */
-
-body {
-  background-color: #f8f9fa;
-  font-family: 'Poppins', sans-serif;
+* {
   margin: 0;
   padding: 0;
+  font-family: 'poppins', sans-serif;
+  box-sizing: border-box;
 }
 
 .frame {
@@ -18,64 +16,112 @@ body {
 }
 
 .container-fluid {
-  width: 100%;
+  width: 300%;
   color: #fff;
 }
 
 .btn-custom-color {
-  background-color: #ff4500;
-  color: #ffffff;
-  border-color: #ff4500;
+  background-color: #ff4500; /* Ganti dengan kode warna yang Anda inginkan */
+  color: #ffffff; /* Ganti dengan warna teks yang sesuai */
+  border-color: #ff4500; /* Ganti dengan warna border yang sesuai */
 }
 
-.btn-custom-color:hover {
-  background-color: #cc3700;
-  border-color: #cc3700;
+.button-container .btn-custom-color:hover {
+  background-color: #cc3700; /* Ganti dengan kode warna hover yang Anda inginkan */
+  border-color: #cc3700; /* Ganti dengan warna border hover yang sesuai */
+}
+
+.row {
+  height: 100%;
 }
 
 .form-frame {
-  max-width: 90%; /* Change this value to adjust the width of the form */
-  margin: auto;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: rgb(0, 0, 255); /* Change color as desired */
   position: relative;
-  overflow: hidden;
+  background-color: rgb(0, 0, 255);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden; /* Hide overflow content (including the running line) */
 }
 
 .form-frame::before {
   content: "";
   position: absolute;
-  top: -2px;
-  left: -2px;
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  border: 2px solid transparent;
-  border-radius: 10px;
-  animation: running-line-animation 4s infinite linear;
-  z-index: -1; /* Ensure the line is behind the form content */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #ffc107, transparent);
+  animation: running-line 2s infinite linear;
 }
 
-@keyframes running-line-animation {
+@keyframes running-line {
   0% {
-    top: -2px;
-    left: -2px;
-  }
-  25% {
-    top: -2px;
-    left: calc(100% - 2px);
-  }
-  50% {
-    top: calc(100% - 2px);
-    left: calc(100% - 2px);
-  }
-  75% {
-    top: calc(100% - 2px);
-    left: -2px;
+    transform: translateX(-100%);
   }
   100% {
-    top: -2px;
-    left: -2px;
+    transform: translateX(100%);
+  }
+}
+
+.frame-sm {
+  height: 400px; /* Sesuaikan tinggi frame sesuai keinginan Anda */
+}
+
+.frame-content {
+  height: 100%; /* Gunakan tinggi 100% agar elemen di dalamnya memanfaatkan tinggi frame yang telah diatur */
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+.frame {
+  height: 100vh;
+}
+
+.form-frame {
+  max-width: 300px; /* Lebar maksimum formulir */
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-custom-color {
+  background-color: #45CCFF;
+  border-color: #ffc107;
+}
+
+.btn-custom-color:hover {
+  background-color: #e0a800;
+  border-color: #e0a800;
+}
+
+.btn-custom-color img {
+  margin-right: 10px;
+}
+
+footer {
+  display: none; /* Menyembunyikan footer setelah sukses */
+}
+
+.form-frame::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ffc107, transparent);
+  animation: running-line 2s infinite linear;
+}
+
+@keyframes running-line {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
   }
 }
