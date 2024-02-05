@@ -41,15 +41,7 @@
   overflow: hidden;
 }
 
-.running-line {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.running-line::before {
+.form-frame::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -59,14 +51,29 @@
   border: 2px solid transparent;
   border-radius: 10px;
   animation: running-line-animation 4s infinite linear;
+  z-index: -1; /* Pastikan garis berada di belakang konten formulir */
 }
 
 @keyframes running-line-animation {
   0% {
-    transform: translateX(-100%);
+    top: -2px;
+    left: -2px;
+  }
+  25% {
+    top: -2px;
+    left: calc(100% - 2px);
+  }
+  50% {
+    top: calc(100% - 2px);
+    left: calc(100% - 2px);
+  }
+  75% {
+    top: calc(100% - 2px);
+    left: -2px;
   }
   100% {
-    transform: translateX(100%);
+    top: -2px;
+    left: -2px;
   }
 }
 
