@@ -102,10 +102,6 @@ body {
   margin-right: 10px;
 }
 
-footer {
-  display: none; /* Menyembunyikan footer setelah sukses */
-}
-
 .form-frame::before {
   content: "";
   position: absolute;
