@@ -41,19 +41,27 @@
   overflow: hidden;
 }
 
-.form-frame::before {
-  content: "";
+.running-line {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border: 2px solid transparent;
-  border-radius: 10px;
-  animation: running-line 4s infinite linear;
 }
 
-@keyframes running-line {
+.running-line::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  animation: running-line-animation 4s infinite linear;
+}
+
+@keyframes running-line-animation {
   0% {
     transform: translateX(-100%);
   }
@@ -61,3 +69,4 @@
     transform: translateX(100%);
   }
 }
+
