@@ -101,13 +101,13 @@ body {
   25% {
     transform: translateY(10%);
   }
-  25% {
+  50% {
     transform: translateX(10%);
   }
-  25% {
+  75% {
     transform: translateY(-10%);
   }
-  25% {
+  100% {
     transform: translateX(-10%);
   }
 }
