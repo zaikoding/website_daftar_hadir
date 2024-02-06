@@ -97,23 +97,23 @@ body {
 @keyframes running-line {
   0% {
     left: -100%;
-    top: -100%;
+    top: 0%;
   }
   25% {
     left: 100%;
-    top: -100%;
+    top: 0%;
   }
   50% {
     left: 100%;
     top: 100%;
   }
   75% {
-    left: -100%;
+    left: 0%;
     top: 100%;
   }
   100% {
     left: -100%;
-    top: -100%;
+    top: 0%;
   }
 }
 
