@@ -85,7 +85,7 @@ body {
 
 .form-frame::before {
   content: "";
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -97,23 +97,23 @@ body {
 @keyframes running-line {
   0% {
     left: -100%;
-    top: 0%;
+    top: -100%;
   }
   25% {
     left: 100%;
-    top: 0%;
+    top: -100%;
   }
   50% {
     left: 100%;
     top: 100%;
   }
   75% {
-    left: 0%;
+    left: -100%;
     top: 100%;
   }
   100% {
     left: -100%;
-    top: 0%;
+    top: -100%;
   }
 }
 
