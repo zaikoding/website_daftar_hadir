@@ -96,19 +96,25 @@ body {
 
 @keyframes running-line {
   0% {
-    transform: translate(-100%, -100%);
+    left: -100%;
+    top: -100%;
   }
   25% {
-    transform: translate(100%, -100%);
+    left: 100%;
+    top: -100%;
   }
   50% {
-    transform: translate(100%, 100%);
+    left: 100%;
+    top: 100%;
   }
   75% {
-    transform: translate(-100%, 100%);
+    left: -100%;
+    top: 100%;
   }
   100% {
-    transform: translate(-100%, -100%);
+    left: -100%;
+    top: -100%;
   }
 }
+
 
