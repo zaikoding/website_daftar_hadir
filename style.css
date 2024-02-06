@@ -70,14 +70,16 @@ body {
 }
 
 .btn-custom-color {
-  background-color: #45CCFF;
-  border-color: #ffc107;
+  background-color: #ff4500; /* Ganti dengan kode warna yang Anda inginkan */
+  color: #ffffff; /* Ganti dengan warna teks yang sesuai */
+  border-color: #ff4500; /* Ganti dengan warna border yang sesuai */
 }
 
 .btn-custom-color:hover {
-  background-color: #e0a800;
-  border-color: #e0a800;
+  background-color: #cc3700; /* Ganti dengan kode warna hover yang Anda inginkan */
+  border-color: #cc3700; /* Ganti dengan warna border hover yang sesuai */
 }
+
 
 .btn-custom-color img {
   margin-right: 10px;
