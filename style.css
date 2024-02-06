@@ -21,12 +21,12 @@
 }
 
 .btn-custom-color {
-  background-color:#bf4e65; /* Ganti dengan kode warna yang Anda inginkan */
-  color: #bf4e65; /* Ganti dengan warna teks yang sesuai */
-  border-color:#ff7f50; /* Ganti dengan warna border yang sesuai */
+  background-color: #ff4500; /* Ganti dengan kode warna yang Anda inginkan */
+  color: #ffffff; /* Ganti dengan warna teks yang sesuai */
+  border-color: #ff4500; /* Ganti dengan warna border yang sesuai */
 }
 
-.button-container .btn-custom-color:hover {
+.btn-custom-color:hover {
   background-color: #cc3700; /* Ganti dengan kode warna hover yang Anda inginkan */
   border-color: #cc3700; /* Ganti dengan warna border hover yang sesuai */
 }
@@ -41,9 +41,7 @@
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  overflow: hidden; /* Hide overflow content (including the running line) */
 }
-
 
 .frame-sm {
   height: 400px; /* Sesuaikan tinggi frame sesuai keinginan Anda */
@@ -70,53 +68,15 @@ body {
 }
 
 .btn-custom-color {
-  background-color: #ff4500; /* Ganti dengan kode warna yang Anda inginkan */
-  color: #ffffff; /* Ganti dengan warna teks yang sesuai */
-  border-color: #ff4500; /* Ganti dengan warna border yang sesuai */
+  background-color: #45CCFF;
+  border-color: #ffc107;
 }
 
 .btn-custom-color:hover {
-  background-color: #cc3700; /* Ganti dengan kode warna hover yang Anda inginkan */
-  border-color: #cc3700; /* Ganti dengan warna border hover yang sesuai */
+  background-color: #e0a800;
+  border-color: #e0a800;
 }
-
 
 .btn-custom-color img {
   margin-right: 10px;
 }
-
-.form-frame::before {
-  content: "";
-  position: relative;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #ffc107, transparent);
-  animation: running-line 2s infinite linear;
-}
-
-@keyframes running-line {
-  0% {
-    left: -100%;
-    top: -100%;
-  }
-  25% {
-    left: 100%;
-    top: -100%;
-  }
-  50% {
-    left: 100%;
-    top: 100%;
-  }
-  75% {
-    left: -100%;
-    top: 100%;
-  }
-  100% {
-    left: -100%;
-    top: -100%;
-  }
-}
-
-
