@@ -96,9 +96,19 @@ body {
 
 @keyframes running-line {
   0% {
-    left: -100%;
+    transform: translate(-100%, -100%);
+  }
+  25% {
+    transform: translate(100%, -100%);
+  }
+  50% {
+    transform: translate(100%, 100%);
+  }
+  75% {
+    transform: translate(-100%, 100%);
   }
   100% {
-    left: 1000%; /* Ubah nilai left agar garis bergerak hingga keluar dari form */
+    transform: translate(-100%, -100%);
   }
 }
+
