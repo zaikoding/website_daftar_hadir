@@ -56,46 +56,53 @@
   </div>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Mendapatkan nilai nama formulir dari penyimpanan lokal saat halaman dimuat
-      var formTitle = localStorage.getItem('formName');
+   document.addEventListener('DOMContentLoaded', function () {
+  // Mendapatkan nilai nama formulir dari penyimpanan lokal saat halaman dimuat
+  var formTitle = localStorage.getItem('formName');
 
-      // Menetapkan nilai formulir ke elemen dengan id formTitle jika ada
-      if (formTitle) {
-        document.getElementById('formTitle').innerText = formTitle;
+  // Menetapkan nilai formulir ke elemen dengan id formTitle jika ada
+  if (formTitle) {
+    document.getElementById('formTitle').innerText = formTitle;
+  }
+
+  // Debugging: Menampilkan nilai formTitle ke konsol
+  console.log('Nilai formTitle:', formTitle);
+});
+
+const form = document.getElementById('submit-form');
+const msg = document.getElementById("msg");
+const footer = document.querySelector('footer');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzZPrTm8F6_os2a-7F-dsM6mafuIpnl2260EBSwzDYLqBUUre2wQWUH46lZnl-HtwaP4w/exec';
+
+  // Debugging: Menampilkan data formData ke konsol sebelum dikirim
+  console.log('Data formData sebelum dikirim:', formData);
+
+  fetch(scriptURL, { method: 'POST', body: formData })
+    .then(response => {
+      if (response.ok) {
+        // Menampilkan notifikasi setelah sukses
+        msg.innerHTML = '<div class="alert alert-success" role="alert">Terimakasih telah mengisi daftar hadir</div>';
+
+        // Menghapus nilai input setelah sukses
+        form.reset();
+
+        // Menyembunyikan footer setelah sukses
+        footer.style.display = 'none';
+      } else {
+        // Menampilkan notifikasi jika terjadi kesalahan
+        msg.innerHTML = '<div class="alert alert-danger" role="alert">Terjadi kesalahan saat mengirim data.</div>';
       }
+    })
+    .catch(error => {
+      console.error('Terjadi kesalahan:', error);
     });
+});
 
-    const form = document.getElementById('submit-form');
-    const msg = document.getElementById("msg");
-    const footer = document.querySelector('footer');
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      const formData = new FormData(form);
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbzZPrTm8F6_os2a-7F-dsM6mafuIpnl2260EBSwzDYLqBUUre2wQWUH46lZnl-HtwaP4w/exec';
-
-      fetch(scriptURL, { method: 'POST', body: formData })
-        .then(response => {
-          if (response.ok) {
-            // Menampilkan notifikasi setelah sukses
-            msg.innerHTML = '<div class="alert alert-success" role="alert">Terimakasih telah mengisi daftar hadir</div>';
-
-            // Menghapus nilai input setelah sukses
-            form.reset();
-
-            // Menyembunyikan footer setelah sukses
-            footer.style.display = 'none';
-          } else {
-            // Menampilkan notifikasi jika terjadi kesalahan
-            msg.innerHTML = '<div class="alert alert-danger" role="alert">Terjadi kesalahan saat mengirim data.</div>';
-          }
-        })
-        .catch(error => {
-          console.error('Terjadi kesalahan:', error);
-        });
-    });
   </script>
 
 </body>
